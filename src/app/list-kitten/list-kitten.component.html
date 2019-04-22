@@ -1,0 +1,29 @@
+<div class="container-fluid d-flex">    <!--création d'un container bootstrap avec la liste globale et la liste utilisateur-->
+  <div class="kittens col-8 p-2">       <!--liste globale-->
+    <div class="title text-center ">
+      <h2>Available for adoption</h2>
+    </div>
+
+    <div class="container border border-dark">
+      <div class="row">
+        <div *ngFor="let kitten of list" class="card m-b-5 p-2 col-sm-12 col-md-6 col-lg-4">
+          <p>{{kitten.name}}</p>
+          <figure>                        <!--mise en place image avec effets au survol-->
+            <img src="{{kitten.img}}" alt="{{kitten.name}}">
+            <figcaption>
+              <span>Birthday :{{kitten.birthday}}</span><br />
+              <span>Type :{{kitten.type}}</span>
+            </figcaption>
+          </figure>
+          <!--création d'un bouton pour ajout liste utilisateur et suppression liste globale-->
+          <button [class.selected]="kitten === selectedKitten" (click)="onSelect(kitten)">Adopt Me</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container col-4 p-2">       <!--liste utilisateur appelée au click sur la liste globale-->
+    <app-user-kitten [kitten]="selectedKitten"></app-user-kitten>
+  </div>
+</div>
+

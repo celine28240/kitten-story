@@ -1,0 +1,18 @@
+<div class="title text-center ">
+  <h2>At home</h2>
+</div>
+<div class="container border border-dark">  <!--création dun cadre au block liste utilisateur-->
+
+  <div *ngIf="kitten" class="card m-b-5 p-2 col-12">  <!--si click sur adoptMe : transfert des éléments dans la liste utilisateur-->
+    <p>{{kitten.name}}</p>
+    <figure>
+      <img src="{{kitten.img}}" alt="{{kitten.name}}">
+      <figcaption>
+        <span>Birthday :{{kitten.birthday}}</span><br/>
+        <span>Type :{{kitten.type}}</span>
+      </figcaption>
+    </figure>
+  </div>
+
+</div>
+<!--le 20/04/2019 23h30 : tentative de créer la liste utilisateur -->

@@ -1,0 +1,18 @@
+p{
+    font-family: 'Pacifico', cursive; /*mise en forme des paragraphes*/
+    font-size : 2rem;
+    text-align: center;
+}
+img{                                    /*taille des photos dans les cards*/
+    max-width: 100%;
+    max-height: 100%;
+}
+.card:hover figcaption{                  /*effet au survol: les informations des chats apparaissent*/
+    visibility: visible;
+    color:blue;
+    font-weight: bold;
+
+}
+.card figcaption{                          /*au chargement, les infos chats ne sont pas visibles*/
+    visibility: hidden;
+}

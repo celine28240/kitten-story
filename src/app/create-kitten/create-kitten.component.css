@@ -1,0 +1,14 @@
+.ng-valid button{ /* couleur de validité du formulaire*/
+    color:green;
+}
+.ng-invalid button{  /* couleur invalidité du formulaire*/
+    color: red;
+}
+.warning{               /*couleur message erreur*/
+    color: red;
+    font-weight: bold;
+}
+#carouselExampleIndicators img{  /*taille des gifs dans le slide CRAZY GIFS*/
+    max-width: 100%;
+    max-height: 100%;
+}
