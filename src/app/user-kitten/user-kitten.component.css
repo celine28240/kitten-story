@@ -1,3 +1,8 @@
+p{
+    font-family: 'Pacifico', cursive; /*mise en forme des paragraphes*/
+    font-size : 2rem;
+    text-align: center;
+}
 img{                    /*mise en forme des images adaptées à la taille dispo*/
     max-width: 100%;
     max-height: 100%;

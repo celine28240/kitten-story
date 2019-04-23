@@ -48,7 +48,7 @@
           <span *ngIf="newImg.errors.required" class="warning">Required Input !</span>
         </div>
       <div>                                           <!--au clic, le chaton est ajouté à la list-kitten-->
-        <button (click) = "createKitten($event)"  class="btn-lg btn-block">Submit a kitten to adoption</button>
+        <button (click) = "createKitten($event)" [disabled]="!createKittenForm.valid" class="btn-lg btn-block">Submit a kitten to adoption</button>
       </div>
 
     </form>

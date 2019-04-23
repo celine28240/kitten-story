@@ -3,7 +3,7 @@
 </div>
 <div class="container border border-dark">  <!--création dun cadre au block liste utilisateur-->
 
-  <div *ngIf="kitten" class="card m-b-5 p-2 col-12">  <!--si click sur adoptMe : transfert des éléments dans la liste utilisateur-->
+  <div *ngFor="let kitten of UserList" class="card m-b-5 p-2 col-12">  <!--si click sur adoptMe : transfert des éléments dans la liste utilisateur-->
     <p>{{kitten.name}}</p>
     <figure>
       <img src="{{kitten.img}}" alt="{{kitten.name}}">

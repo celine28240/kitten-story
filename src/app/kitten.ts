@@ -5,3 +5,4 @@ export class Kitten {           /*création des typages de classes à exporter*/
     img : string;
 }
 export const KITTENS: Kitten[]=[];
+export const UserList: Kitten[]=[];

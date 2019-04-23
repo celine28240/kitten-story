@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Kitten} from '../kitten';
+import {UserList} from '../kitten';
 
 @Component({
   selector: 'app-user-kitten',
@@ -8,7 +9,8 @@ import {Kitten} from '../kitten';
 })
 export class UserKittenComponent implements OnInit {
 
-  @Input()kitten: Kitten;   //insertion du chat et de tous ses param dans la liste utilisateur
+  UserList = UserList;
+  @Input()kitten: Kitten[];    //insertion du chat et de tous ses param dans la liste utilisateur
   constructor() { }
 
   ngOnInit() {

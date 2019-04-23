@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Kitten, KITTENS} from '../kitten';
-
+import {UserList} from '../kitten';
 
 @Component({
   selector: 'app-list-kitten',
@@ -11,6 +11,7 @@ export class ListKittenComponent implements OnInit {
 
 
   public list:Kitten[];
+  
                                       //ajoute le chat du formulaire à la liste globale
   kitten = KITTENS;
   selectedKitten:Kitten;
@@ -22,6 +23,7 @@ export class ListKittenComponent implements OnInit {
   onSelect(kitten:Kitten): void{
     this.selectedKitten=kitten;
     KITTENS.splice(KITTENS.indexOf(kitten),1);
+    UserList.push(this.selectedKitten);
   }
   ngOnInit() {
   }
